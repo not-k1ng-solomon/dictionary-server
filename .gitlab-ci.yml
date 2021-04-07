@@ -1,0 +1,18 @@
+image: node:latest
+
+pages:
+  stage: deploy
+  script:
+    ## я часто сталкивалась с какими-то странными проблемами при скачивании зависимостей и решила намертво захардкодить это в конфиге
+    - npm config set registry https://registry.npmjs.org/
+    ## качаем зависимости! каждый раз это будет происходить заново
+    - npm i
+    ## билдим проект
+    - npm run build:production
+    ## перекладываем в папку public
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

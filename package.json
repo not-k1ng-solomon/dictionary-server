@@ -1,10 +1,10 @@
 {
   "name": "glossary",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "public/index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node public/index.js",
+    "dev": "nodemon public/index.js"
   },
   "keywords": [],
   "author": "",
