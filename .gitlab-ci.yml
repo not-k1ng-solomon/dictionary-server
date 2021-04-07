@@ -8,7 +8,7 @@ pages:
     ## качаем зависимости! каждый раз это будет происходить заново
     - npm i
     ## билдим проект
-    - npm run build:production
+#    - npm run build:production
     ## перекладываем в папку public
     - mv dist public
   artifacts:
